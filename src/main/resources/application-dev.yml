@@ -1,0 +1,58 @@
+spring:
+  jwt:
+    access_secret: access
+    refresh_secret: refresh
+  #h2 db 설정
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:~/trading
+  #JPA 설정
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properites:
+      hibernate:
+        format_sql: true
+  #redis 설정
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+  #파일 업로드 설정
+  servlet:
+    multipart:
+      location: C:/Temp
+      max-file-size: 2MB
+      max-request-size: 1MB
+
+file:
+  upload:
+    path: C:\\\\testFolder
+#server Port
+server:
+  port: 443
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-type: PKCS12
+    key-store-password: kjm
+
+#로그 설정
+logging.level:
+  org.hibernate.SQL: debug
+
+#SMS 발송 (CoolSms)
+cool_sms:
+  api_key: NCSIFPQ0KJWEVQAL
+  api_secret: NFNO5UNLZLDXTJHABADXCZHGQEUGTBC6
+  sender_phone_no: "01097950034"
+
+#socail
+oauth2:
+  kakao:
+    client-id: 5b17111e1695435893102ec7a6da7bec
+    client-secret: Pv7CuYylaJBuZVbR8bn0WDSjCJjUYyPB
+    redirect-url: http://devkjm.com/oauth/callback/kakao
+

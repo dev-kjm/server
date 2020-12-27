@@ -1,0 +1,39 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+= API Document
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:docinfo: shared-head
+
+== 이메일,닉네임 중복확인
+include::{snippets}/existenceEmail/request-parameters.adoc[]
+include::{snippets}/existenceEmail/http-request.adoc[]
+
+include::{snippets}/existenceEmail/response-fields.adoc[]
+include::{snippets}/existenceEmail/http-response.adoc[]
+
+== SMS 발송
+프로필 파일
+include::{snippets}/sendSms/request-parameters.adoc[]
+include::{snippets}/sendSms/http-request.adoc[]
+include::{snippets}/sendSms/http-response.adoc[]
+
+== SMS 인증번호 확인
+프로필 파일
+include::{snippets}/sendSmsVerification/request-parameters.adoc[]
+include::{snippets}/sendSmsVerification/http-request.adoc[]
+include::{snippets}/sendSmsVerification/http-response.adoc[]
+
+
+== 회원가입
+ 프로필 파일 이미지 업로드 위해 'multipart/form-data' 형태로 데이터 전송
+include::{snippets}/signUp/request-parameters.adoc[]
+include::{snippets}/signUp/http-request.adoc[]
+include::{snippets}/signUp/http-response.adoc[]
+
+
